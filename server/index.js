@@ -92,7 +92,7 @@ app.post("/resume/create", upload.single("headshotImage"), async (req, res) => {
     //👇🏻 工作成就描述
     const prompt3 = `我正在写一份简历, 我的详细信息是 \n 姓名: ${fullName} \n 职位: ${currentPosition} (${currentLength} 年). \n 我曾经在 ${
         workArray.length
-    } 公司工作过. ${remainderText()} \n 你能为每个公司写 50 字描述吗，用我在公司的号分开（第一人称）?`;
+    } 个公司工作过. ${remainderText()} \n 你能为每个公司写 50 字描述吗，用我在公司的号分开（第一人称）?`;
 
     //👇🏻 生成一个 GPT-3 结果
     const objective = await GPTFunction(prompt1);
